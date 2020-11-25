@@ -1,0 +1,211 @@
+NSGlobalDomain:
+  # Enable dark mode
+  AppleInterfaceStyle: "Dark"
+  AppleAccentColor: "-1"
+  AppleHighlightColor: "0.847059 0.847059 0.862745 Graphite"
+
+  # Use metric units.
+  AppleMeasurementUnits: "Centimeters"
+  AppleMetricUnits: true
+  AppleTemperatureUnit: "Celsius"
+
+  # Disable “natural” scrolling.
+  com.apple.swipescrolldirection: false
+
+  # System Preferences > Keyboard > Shortcuts > Full Keyboard Access > All
+  # controls.
+  AppleKeyboardUIMode: 3
+
+  # System Preferences > General > Sidebar icon size > Medium.
+  NSTableViewDefaultSizeMode: 2
+
+  # Disable press and hold character picker.
+  ApplePressAndHoldEnabled: false
+
+  # Increase key repeat rate.
+  KeyRepeat: 2
+  InitialKeyRepeat: 15
+
+  # Disable smooth scrolling.
+  NSScrollAnimationEnabled: false
+
+  # Show all filename extensions.
+  AppleShowAllExtensions: true
+
+  # Enable spring loading for directories.
+  com.apple.springing.enabled: true
+
+  # Remove the spring loading delay for directories.
+  com.apple.springing.delay: 0
+
+  # Disable automatic text substitution and autocorrect.
+  NSAutomaticCapitalizationEnabled: false
+  NSAutomaticDashSubstitutionEnabled: false
+  NSAutomaticPeriodSubstitutionEnabled: false
+  NSAutomaticQuoteSubstitutionEnabled: false
+  NSAutomaticSpellingCorrectionEnabled: false
+
+  # Save to disk by default, instead of iCloud.
+  NSDocumentSaveNewDocumentsToCloud: false
+
+com.apple.desktopservices:
+  # Disable .DS_Store files on network drives.
+  DSDontWriteNetworkStores: true
+
+  # Disable .DS_Store files on external drives.
+  DSDontWriteUSBStores: true
+
+com.apple.screensaver:
+  # Require password immediately after sleep or screen saver begins
+  askForPassword: 1
+  askForPasswordDelay: 0
+
+com.apple.dock:
+  # Position on screen > Left.
+  orientation: left
+
+  # Minimize windows into their application’s icon.
+  minimize-to-application: true
+
+  # Show indicator lights for open applications in the Dock.
+  show-process-indicators: true
+
+  # Don’t animate opening applications from the Dock.
+  launchanim: false
+
+  # Don’t show Dashboard as a Space.
+  dashboard-in-overlay: true
+
+  # Don’t automatically rearrange Spaces based on most recent use.
+  mru-spaces: false
+
+  # Remove the auto-hiding Dock delay.
+  autohide-delay: 0
+
+  # Automatically hide and show the Dock.
+  autohide: true
+
+  # Make Dock icons of hidden applications translucent.
+  showhidden: true
+
+  # Don’t show recent applications in Dock.
+  show-recents: false
+
+  # Disable hot corners.
+  wvous-tr-corner: 0
+  wvous-tr-modifier: 0
+  wvous-br-corner: 0
+  wvous-br-modifier: 0
+  wvous-bl-corner: 0
+  wvous-bl-modifier: 0
+
+com.apple.dashboard:
+  # Disable Dashboard
+  mcx-disabled: true
+
+com.apple.finder:
+  # Finder > View > Show view options > Sort Group By > Name.
+  FXArrangeGroupViewBy: Name
+
+  # Finder > Preferences > Advanced > When performing a search > Search the
+  # current folder.
+  FXDefaultSearchScope: SCcf
+
+  # Finder > View > Show view options > Group By > None.
+  FXPreferredGroupBy: None
+
+  # Finder > View > As List.
+  FXPreferredViewStyle: Nlsv
+
+  # Keep folders on top when sorting by name.
+  _FXSortFoldersFirst: true
+
+  # Disable the warning when changing a file extension.
+  FXEnableExtensionChangeWarning: false
+
+  # Finder > Preferences > New Finder windows show > Home directory.
+  NewWindowTarget: PfHm
+
+  # Finder > Preferences > New Finder windows show > Home directory.
+  NewWindowTargetPath: "file://${HOME}"
+
+  # Enable "Quit Finder" menu item.
+  QuitMenuItem: true
+
+  # Show status bar.
+  ShowStatusBar: true
+
+  # Show path bar.
+  ShowPathBar: true
+
+  # Finder > Preferences > Show these items on the desktop > Hard disks.
+  ShowHardDrivesOnDesktop: false
+
+  # Finder > Preferences > Show these items on the desktop > External disks.
+  ShowExternalHardDrivesOnDesktop: false
+
+  # Finder > Preferences > Show these items on the desktop > CDs, DVDs & iPods.
+  ShowRemovableMediaOnDesktop: false
+
+  # Finder > Preferences > Show these items on the desktop > Connected servers.
+  ShowMountedServersOnDesktop: false
+
+com.apple.menuextra.clock:
+  # Set menu bar clock format
+  IsAnalog: false
+  DateFormat: "EEE MMM d H:mm"
+
+com.apple.iTunes:
+  # iTunes > Preferences > Devices > Prevent iPods, iPhones, and iPads from
+  # syncing automatically.
+  dontAutomaticallySyncIPods: true
+
+com.apple.Safari:
+  # Use substring search by default in Safari.
+  FindOnPageMatchesWordStartsOnly: false
+
+com.apple.dt.Xcode:
+  # Xcode > Preferences > Text Editing > Page guide at column.
+  DVTTextShowPageGuide: true
+
+  # Xcode > Preferences > Text Editing > While editing: Automatically trim
+  # trailing whitespace.
+  DVTTextEditorTrimTrailingWhitespace: true
+
+  # Xcode > Preferences > Text Editing > While editing: Automatically trim
+  # trailing whitespace > Including whitespace-only lines.
+  DVTTextEditorTrimWhitespaceOnlyLines: true
+
+  # Xcode > Preferences > Text Editing > Page guide at column: 120.
+  DVTTextPageGuideLocation: 120
+
+  # Xcode > Preferences > General > Issue Navigator Detail > Up to Ten Lines.
+  IDESearchNavigatorDetailLevel: 10
+
+  # Show build timer within Xcode UI.
+  ShowBuildOperationDuration: true
+
+  # Xcode > Preferences > Fonts & Colors > Theme > San Jose.
+  XCFontAndColorCurrentTheme: "San Jose.xccolortheme"
+  XCFontAndColorCurrentDarkTheme: "San Jose.xccolortheme"
+
+com.apple.TextEdit:
+  # TextEdit > Preferences > New Document > Plain text.
+  RichText: false
+
+com.apple.Terminal:
+  # Terminal > Secure Keyboard Entry.
+  SecureKeyboardEntry: true
+
+  # Set custom theme as default.
+  "Default Window Settings": Zenburn
+  "Startup Window Settings": Zenburn
+
+com.apple.SoftwareUpdate:
+  # System Preferences > Software Update > Advanced... > Automatically check
+  # for updates.
+  AutomaticCheckEnabled: true
+
+  # System Preferences > Software Update > Advanced... > Download new updates
+  # when available.
+  AutomaticDownload: true
