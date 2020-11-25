@@ -5,6 +5,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
+tap "djocker/common"
 
 # ----------------- packages for both work and personal use ----------------- #
 brew "bash"
