@@ -43,13 +43,13 @@ cask "zoomus"
 
 # ------------------------------ casks for work ----------------------------- #
 cask "docker"
+cask "adoptopenjdk8"
 cask "visual-studio-code"
 
 # -------------------------- casks for personal use ------------------------- #
 cask "arduino"
 cask "audio-hijack"
 cask "gimp"
-cask "java8"
 cask "jetbrains-toolbox"
 cask "loopback"
 cask "slack"
