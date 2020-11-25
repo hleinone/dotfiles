@@ -6,6 +6,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
 tap "djocker/common"
+tap "heroku/brew"
 
 # ----------------- packages for both work and personal use ----------------- #
 brew "bash"
