@@ -165,29 +165,11 @@ com.apple.Safari:
   FindOnPageMatchesWordStartsOnly: false
 
 com.apple.dt.Xcode:
-  # Xcode > Preferences > Text Editing > Page guide at column.
-  DVTTextShowPageGuide: true
-
-  # Xcode > Preferences > Text Editing > While editing: Automatically trim
-  # trailing whitespace.
-  DVTTextEditorTrimTrailingWhitespace: true
-
-  # Xcode > Preferences > Text Editing > While editing: Automatically trim
-  # trailing whitespace > Including whitespace-only lines.
-  DVTTextEditorTrimWhitespaceOnlyLines: true
-
   # Xcode > Preferences > Text Editing > Page guide at column: 120.
   DVTTextPageGuideLocation: 120
 
-  # Xcode > Preferences > General > Issue Navigator Detail > Up to Ten Lines.
-  IDESearchNavigatorDetailLevel: 10
-
   # Show build timer within Xcode UI.
   ShowBuildOperationDuration: true
-
-  # Xcode > Preferences > Fonts & Colors > Theme > San Jose.
-  XCFontAndColorCurrentTheme: "San Jose.xccolortheme"
-  XCFontAndColorCurrentDarkTheme: "San Jose.xccolortheme"
 
 com.apple.TextEdit:
   # TextEdit > Preferences > New Document > Plain text.
