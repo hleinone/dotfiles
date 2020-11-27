@@ -2,8 +2,7 @@ NSGlobalDomain:
   # Enable dark mode
   AppleInterfaceStyle: "Dark"
   AppleAccentColor: "-1"
-  AppleHighlightColor: "0.847059 0.847059 0.862745 Graphite"
-
+  
   # Use metric units.
   AppleMeasurementUnits: "Centimeters"
   AppleMetricUnits: true
