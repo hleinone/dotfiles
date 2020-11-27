@@ -9,10 +9,6 @@ zero setup
 
 ## TODO
 
-* Custom keyboard shortcuts for Slack & iOS Simulator
-* Sublime Text preferences
-* Android Studio & AppCode profiles
-* Karabiner
+* Custom Git configs
 * Setting up SSH
-* Settung up GPG
-* VS Code plugins
+* Setting up GPG

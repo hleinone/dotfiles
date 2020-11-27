@@ -42,3 +42,12 @@ defaults write com.tinyspeck.slackmacgap NSUserKeyEquivalents '{
 Back="@\U2190";
 Forward="@\U2192";
 }'
+
+echo ""
+echo "\e[32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/"
+echo "\e[32mInstall Smart Scroll from: https://www.marcmoini.com/sx_en.html"
+echo "\e[32mInstall Android Studio, AppCode etc. from Jetbrains Toolbox"
+echo ""
+echo "\e[32mTurn on VSCode settings sync"
+echo "\e[32mTurn on BetterTouchTool settings sync"
+echo "\e[32mTurn on Android Studio & AppCode settings sync"
