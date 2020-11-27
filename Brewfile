@@ -5,8 +5,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
-tap "djocker/common"
-tap "heroku/brew"
 
 # ----------------- packages for both work and personal use ----------------- #
 brew "bash"
@@ -24,7 +22,6 @@ brew "youtube-dl"
 # ------------------------ packages for work use ------------------------ #
 brew "apktool"
 brew "node"
-brew "openjdk"
 brew "ruby"
 
 # --------------------- casks for work and personal use --------------------- #
@@ -43,6 +40,7 @@ cask "zoomus"
 
 # ------------------------------ casks for work ----------------------------- #
 cask "docker"
+cask "adoptopenjdk"
 cask "adoptopenjdk8"
 cask "visual-studio-code"
 
