@@ -22,12 +22,7 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
     set +x
 )
 
-echo "Updating Dock..."
 
-set -x
-dockutil --remove all --no-restart
-dockutil --add ~/Downloads --display stack # Implicitly restarts the Dock.
-set +x
 
 echo "Install Additional Tools for Xcode from: https://developer.apple.com/download/more/"
 echo "Install Smart Scroll from: https://www.marcmoini.com/sx_en.html"
