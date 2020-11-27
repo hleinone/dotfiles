@@ -22,8 +22,23 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
     set +x
 )
 
+# Custom keyboard shortcuts
+defaults write com.apple.universalaccess com.apple.custommenu.apps '(
+"com.tinyspeck.slackmacgap", 
+"com.apple.iphonesimulator", 
+"com.apple.finder"
+)'
 
+defaults write com.apple.finder NSUserKeyEquivalents '{
+Back="@\U2190";
+Forward="@\U2192";
+}'
 
-echo "Install Additional Tools for Xcode from: https://developer.apple.com/download/more/"
-echo "Install Smart Scroll from: https://www.marcmoini.com/sx_en.html"
-echo "Install Android Studio, AppCode etc. from Jetbrains Toolbox"
+defaults write com.apple.iphonesimulator NSUserKeyEquivalents '{
+"Slow Animations"="@t";
+}'
+
+defaults write com.tinyspeck.slackmacgap NSUserKeyEquivalents '{
+Back="@\U2190";
+Forward="@\U2192";
+}'
