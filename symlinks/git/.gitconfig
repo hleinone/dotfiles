@@ -1,0 +1,7 @@
+[user]
+	name = Hannu Leinonen
+	email = hleinone@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+[commit]
+	gpgSign = false
