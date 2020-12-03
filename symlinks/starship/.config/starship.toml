@@ -9,4 +9,3 @@ $character"""
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = "⌥ "
