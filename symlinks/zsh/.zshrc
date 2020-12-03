@@ -7,6 +7,7 @@ fi
 
 # Colors
 export CLICOLOR=1
+export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
 export LANG=en_US.UTF-8
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
