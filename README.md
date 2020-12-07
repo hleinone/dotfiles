@@ -12,3 +12,4 @@ zero setup
 * Custom Git configs
 * Setting up SSH
 * Setting up GPG
+* File type associations
