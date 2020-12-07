@@ -26,3 +26,6 @@ autoload -U compinit
 compinit
 # This sets the case insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+
+# Load nodenv
+eval "$(nodenv init -)"

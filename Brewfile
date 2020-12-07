@@ -23,6 +23,7 @@ brew "youtube-dl"
 # ------------------------ packages for work use ------------------------ #
 brew "apktool"
 brew "node"
+brew "nodenv"
 brew "ruby"
 
 # --------------------- casks for work and personal use --------------------- #
