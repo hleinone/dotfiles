@@ -27,8 +27,20 @@ bindkey "^[[B" history-beginning-search-forward
 # providing the case-sensitive expansion
 autoload -U compinit
 compinit
+
 # This sets the case insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
 # Load nodenv
 eval "$(nodenv init -)"
+
+# Load jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# Load rbenv
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+eval "$(rbenv init -)"
+
+# Load thefuck
+eval "$(thefuck --alias)"
