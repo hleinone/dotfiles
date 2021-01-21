@@ -32,6 +32,8 @@ brew "apktool"
 brew "node"
 brew "nodenv"
 brew "ruby"
+brew "rbenv"
+brew "jenv"
 
 # --------------------- casks for work and personal use --------------------- #
 cask "aerial"
