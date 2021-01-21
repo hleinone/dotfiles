@@ -9,13 +9,17 @@ tap "microsoft/git"
 
 # ----------------- packages for both work and personal use ----------------- #
 brew "bash"
-brew "findutils"
 brew "git"
 brew "vim"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+
+# ----------------- GNU ----------------- #
+brew "findutils"
+brew "gnu-sed"
+brew "grep"
 
 # ------------------------ packages for personal use ------------------------ #
 brew "youtube-dl"
