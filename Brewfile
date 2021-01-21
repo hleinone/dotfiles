@@ -49,6 +49,7 @@ cask "karabiner-elements"
 cask "kitty"
 cask "lastpass"
 cask "sketch"
+cask "stay"
 cask "sublime-text"
 cask "zoomus"
 
