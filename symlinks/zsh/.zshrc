@@ -20,6 +20,8 @@ bindkey "^[[F" end-of-line
 bindkey "^[[3~" backward-kill-line
 bindkey "^R" history-incremental-search-backward
 bindkey "^[[R~" history-incremental-search-forward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # These two initialize the completion system,
 # providing the case-sensitive expansion
