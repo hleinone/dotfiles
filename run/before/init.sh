@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 set -o errexit -o nounset
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
