@@ -32,6 +32,18 @@ compinit
 # This sets the case insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
+# if the init script doesn't exist
+if ! zgen saved; then
+
+  # specify plugins here
+
+  # generate the init script from plugins above
+  zgen save
+fi
+
 # Load nodenv
 eval "$(nodenv init -)"
 
