@@ -21,12 +21,15 @@ bindkey "^[[3~" backward-kill-line
 bindkey "^[^M" self-insert-unmeta
 bindkey "^R" history-incremental-search-backward
 bindkey "^[[R~" history-incremental-search-forward
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 # These two initialize the completion system,
 # providing the case-sensitive expansion
-autoload -U compinit
+autoload -Uz compinit
 compinit
 
 # This sets the case insensitivity
