@@ -8,7 +8,7 @@ NSGlobalDomain:
   AppleMetricUnits: true
   AppleTemperatureUnit: "Celsius"
 
-  # Disable “natural” scrolling.
+  # Disable "natural" scrolling.
   com.apple.swipescrolldirection: false
 
   # System Preferences > Keyboard > Shortcuts > Full Keyboard Access > All
@@ -22,8 +22,8 @@ NSGlobalDomain:
   ApplePressAndHoldEnabled: false
 
   # Increase key repeat rate.
-  KeyRepeat: 2
-  InitialKeyRepeat: 15
+  KeyRepeat: 6
+  InitialKeyRepeat: 25
 
   # Disable smooth scrolling.
   NSScrollAnimationEnabled: false
