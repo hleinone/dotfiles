@@ -7,66 +7,75 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
 
-# ----------------- packages for both work and personal use ----------------- #
+# Command line
 brew "bash"
 brew "ffmpeg"
-brew "git"
 brew "imagemagick"
 brew "thefuck"
-brew "vim"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-# ----------------- GNU ----------------- #
+# GNU
 brew "findutils"
 brew "gnu-sed"
 brew "grep"
 
-# ------------------------ packages for personal use ------------------------ #
-brew "youtube-dl"
-
-# ------------------------ packages for work use ------------------------ #
-brew "apktool"
-brew "node"
+# Programming environments
+cask "adoptopenjdk"
+cask "adoptopenjdk8"
+#brew "node"
 brew "nodenv"
-brew "ruby"
+#brew "python@3.9"
+brew "pyenv"
+#brew "ruby"
 brew "rbenv"
 brew "jenv"
 
-# --------------------- casks for work and personal use --------------------- #
+# Editors & IDEs
+cask "jetbrains-toolbox"
+cask "sublime-text"
+brew "vim"
+cask "visual-studio-code"
+mas "xcode", id: 497799835
+
+# Development tools
+cask "fork"
+brew "git"
+cask "gpg-suite-no-mail"
+
+# Tools to make MacOS nicer
 cask "aerial"
 cask "bettertouchtool"
-cask "brave-browser"
-cask "figma"
-cask "fork"
-cask "gimp"
-cask "google-drive-file-stream"
-cask "gpg-suite-no-mail"
 cask "hyperswitch"
 cask "karabiner-elements"
-cask "kitty"
-cask "lastpass"
-cask "sketch"
 cask "stay"
-cask "sublime-text"
-cask "zoomus"
 
-# ------------------------------ casks for work ----------------------------- #
+# Tools
+brew "apktool"
 cask "docker"
-cask "adoptopenjdk"
-cask "adoptopenjdk8"
-cask "visual-studio-code"
+brew "youtube-dl"
 
-# -------------------------- casks for personal use ------------------------- #
-cask "arduino"
-cask "audio-hijack"
-cask "gimp"
-cask "jetbrains-toolbox"
-cask "loopback"
+# Desktop apps
+mas "bitwarden", id: 1352778147
+cask "brave-browser"
+cask "google-drive-file-stream"
+cask "kitty"
 cask "slack"
 cask "vlc"
+cask "zoomus"
 
-# ------------------------------ mac app store ------------------------------ #
-mas "xcode", id: 497799835
+# Design
+cask "figma"
+cask "gimp"
+cask "sketch"
+
+# Non-essential hobby apps
+cask "arduino"
+cask "audio-hijack"
+cask "loopback"
+cask "openscad"
+
+# Gaming
+cask "steam"
