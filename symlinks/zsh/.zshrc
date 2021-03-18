@@ -49,16 +49,16 @@ if ! zgen saved; then
 fi
 
 # Load nodenv
-lazyload nodenv node npm npx -- 'eval "$(nodenv init -)"'
+lazyload nodenv $(ls -1 $HOME/.nodenv/shims) -- 'eval "$(nodenv init -)"'
 
 # Load jenv
-lazyload jenv java javac -- 'export PATH="$HOME/.jenv/bin:$PATH";eval "$(jenv init -)"'
+lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH";eval "$(jenv init -)"'
 
 # Load rbenv
-lazyload rbenv ruby gem bundle bundler pod fastlane -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
+lazyload rbenv $(ls -1 $HOME/.rbenv/shims) -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
 
 # Load pyenv
-lazyload pyenv python python3 pip pip3 easy_install pydoc pydoc3 -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
+lazyload pyenv $(ls -1 $HOME/.pyenv/shims) -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
 
 # Include mysql-client
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
