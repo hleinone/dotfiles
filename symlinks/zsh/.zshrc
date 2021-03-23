@@ -56,6 +56,11 @@ lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH"
 
 # Load rbenv
 lazyload rbenv $(ls -1 $HOME/.rbenv/shims) -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
+# Eager load if Android Studio
+PARENT_PROCESS_NAME=$(basename "$(ps -p $PPID -o comm=)")
+if [[ "$PARENT_PROCESS_NAME" == "studio" ]] then
+  rbenv
+fi
 
 # Load pyenv
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
