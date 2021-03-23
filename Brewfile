@@ -32,6 +32,7 @@ brew "pyenv"
 #brew "ruby"
 brew "rbenv"
 brew "jenv"
+cask "flutter"
 
 # Editors & IDEs
 cask "jetbrains-toolbox"
