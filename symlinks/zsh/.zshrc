@@ -55,7 +55,7 @@ lazyload nodenv $(ls -1 $HOME/.nodenv/shims) -- 'eval "$(nodenv init -)"'
 lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH";eval "$(jenv init -)"'
 
 # Load rbenv
-lazyload rbenv $(ls -1 $HOME/.rbenv/shims) -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
+lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
 # Eager load if Android Studio
 PARENT_PROCESS_NAME=$(basename "$(ps -p $PPID -o comm=)")
 if [[ "$PARENT_PROCESS_NAME" == "studio" ]] then
