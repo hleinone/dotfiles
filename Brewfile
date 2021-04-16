@@ -7,6 +7,8 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "microsoft/git"
 
+brew "mas"
+
 # Command line
 brew "bash"
 brew "ffmpeg"
@@ -65,7 +67,7 @@ cask "google-drive-file-stream"
 cask "kitty"
 cask "slack"
 cask "vlc"
-cask "zoomus"
+cask "zoom"
 
 # Design
 cask "figma"
