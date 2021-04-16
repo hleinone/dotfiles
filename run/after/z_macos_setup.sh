@@ -44,10 +44,10 @@ Forward="@\U2192";
 }'
 
 echo ""
-echo "\e[32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\e[0m"
-echo "\e[32mInstall Smart Scroll from: https://www.marcmoini.com/sx_en.html\e[0m"
-echo "\e[32mInstall Android Studio, AppCode etc. from Jetbrains Toolbox\e[0m"
+echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
+echo "\033[0;32mInstall Smart Scroll from: https://www.marcmoini.com/sx_en.html\033[0m"
+echo "\033[0;32mInstall Android Studio, AppCode etc. from Jetbrains Toolbox\033[0m"
 echo ""
-echo "\e[32mTurn on VSCode settings sync\e[0m"
-echo "\e[32mTurn on BetterTouchTool settings sync\e[0m"
-echo "\e[32mTurn on Android Studio & AppCode settings sync\e[0m"
+echo "\033[0;32mTurn on VSCode settings sync\033[0m"
+echo "\033[0;32mTurn on BetterTouchTool settings sync\033[0m"
+echo "\033[0;32mTurn on Android Studio & AppCode settings sync\033[0m"
