@@ -13,7 +13,30 @@ Setting up a new Mac using [zero.sh](https://github.com/zero-sh/zero.sh).
 
 ## TODO
 
+* Some Homebrew casks need reinstall
+ * karabiner-elements
+ * gpg-suite-no-mail
+ * adoptopenjdk8
+ * adoptopenjdk
+ * google-drive
 * Custom Git configs
 * Setting up SSH
 * Setting up GPG
 * File type associations
+* Jetbrains Toolbox installation
+ * Android Studio
+ * AppCode
+* Apply licenses
+ * Sublime Text
+ * AppCode
+ * Audio Hijack
+ * Loopback
+ * Sketch
+ * Smart Scroll
+* Setup env versions
+ * nodenv
+ * pyenv
+ * rbenv
+ * jenv
+* Change screen saver to Aerial
+* Touch bar settings
