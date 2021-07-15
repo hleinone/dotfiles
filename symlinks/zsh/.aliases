@@ -8,3 +8,5 @@ alias mv='mv -i'
 
 alias icat='kitty +kitten icat'
 alias d='kitty +kitten diff'
+
+alias get_idf='. $HOME/esp/esp-idf/export.sh'

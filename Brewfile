@@ -35,6 +35,9 @@ brew "pyenv"
 brew "rbenv"
 brew "jenv"
 cask "flutter"
+brew "cmake"
+brew "ninja"
+brew "dfu-util"
 
 # Editors & IDEs
 cask "jetbrains-toolbox"

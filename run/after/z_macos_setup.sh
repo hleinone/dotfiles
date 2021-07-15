@@ -37,6 +37,12 @@ LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
 rbenv install "$LATEST_RUBY"
 rbenv global "$LATEST_RUBY"
 
+# Install ESP-IDF
+echo "Installing ESP-IDF…"
+mkdir -p ~/esp
+git clone --recursive https://github.com/espressif/esp-idf.git ~/esp/esp-idf
+~/esp/esp-idf/install.sh
+
 echo ""
 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
 echo "\033[0;32mInstall Smart Scroll from: https://www.marcmoini.com/sx_en.html\033[0m"
