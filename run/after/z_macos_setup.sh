@@ -37,6 +37,10 @@ LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
 rbenv install "$LATEST_RUBY"
 rbenv global "$LATEST_RUBY"
 
+# Install Rust
+echo "Installing latest Rust…"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Install ESP-IDF
 echo "Installing ESP-IDF…"
 mkdir -p ~/esp
