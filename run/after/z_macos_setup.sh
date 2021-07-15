@@ -5,7 +5,7 @@ REPOS_DIR="$(mktemp -d -t macos_setup_repos)"
 
 trap 'rm -rf "$REPOS_DIR"' EXIT
 (
-    echo "Installing PAM Touch ID..."
+    echo "Installing PAM Touch ID…"
     cd "$REPOS_DIR"
     set -x
     git clone https://github.com/Reflejo/pam-touchID.git
@@ -14,13 +14,28 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
     set +x
 
     cd -
-    echo "Installing PAM Watch ID..."
+    echo "Installing PAM Watch ID…"
     set -x
     git clone https://github.com/biscuitehh/pam-watchid.git
     cd pam-watchid
     sudo make install
     set +x
 )
+
+echo "Installing latest Node globally using nodenv…"
+LATEST_NODE="$(nodenv install -l | ggrep -E '^[0-9\.]+$' | tail -1)"
+nodenv install $LATEST_NODE
+nodenv global $LATEST_NODE
+
+echo "Installing latest Python globally using pyenv…"
+LATEST_PYTHON="$(pyenv install -l | ggrep -E '^\s*([0-9\.])+$' | sed 's/^ *//g' | tail -1)"
+pyenv install "$LATEST_PYTHON"
+pyenv global "$LATEST_PYTHON"
+
+echo "Installing latest Ruby globally using rbenv…"
+LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
+rbenv install "$LATEST_RUBY"
+rbenv global "$LATEST_RUBY"
 
 echo ""
 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
