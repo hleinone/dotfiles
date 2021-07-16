@@ -37,6 +37,13 @@ LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
 rbenv install "$LATEST_RUBY"
 rbenv global "$LATEST_RUBY"
 
+echo "Setting up latest Java globally using jenv…"
+for java in /Library/Java/JavaVirtualMachines/*; do
+  jenv add "$java/Contents/Home/"
+done
+LATEST_JAVA="$(jenv versions --bare | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
+jenv global "$LATEST_JAVA"
+
 # Install Rust
 echo "Installing latest Rust…"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
