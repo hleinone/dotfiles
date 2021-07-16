@@ -28,7 +28,7 @@ nodenv install $LATEST_NODE
 nodenv global $LATEST_NODE
 
 echo "Installing latest Python globally using pyenv…"
-LATEST_PYTHON="$(pyenv install -l | ggrep -E '^\s*([0-9\.])+$' | sed 's/^ *//g' | tail -1)"
+LATEST_PYTHON="$(pyenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
 pyenv install "$LATEST_PYTHON"
 pyenv global "$LATEST_PYTHON"
 
