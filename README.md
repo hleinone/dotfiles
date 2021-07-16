@@ -33,10 +33,5 @@ Setting up a new Mac using [zero.sh](https://github.com/zero-sh/zero.sh).
  * Loopback
  * Sketch
  * Smart Scroll
-* Setup env versions
- * nodenv
- * pyenv
- * rbenv
- * jenv
 * Change screen saver to Aerial
 * Touch bar settings
