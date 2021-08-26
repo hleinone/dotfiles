@@ -25,8 +25,9 @@ brew "gnu-sed"
 brew "grep"
 
 # Programming environments
-cask "adoptopenjdk"
-cask "adoptopenjdk8"
+cask "temurin"
+cask "temurin8"
+cask "temurin11"
 #brew "node"
 brew "nodenv"
 #brew "python@3.9"
