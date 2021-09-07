@@ -12,6 +12,7 @@ export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 export LANG=en_US.UTF-8
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export JAVA_HOME=""
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
