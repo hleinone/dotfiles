@@ -14,11 +14,10 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export JAVA_HOME=""
 
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "^[[3~" backward-kill-line
+bindkey "^[[1;3C" forward-word # ⌥+→
+bindkey "^[[1;3D" backward-word # ⌥+←
+bindkey "^[[H" beginning-of-line # ⌘+←
+bindkey "^[[F" end-of-line # ⌘+→
 bindkey "^[^M" self-insert-unmeta
 bindkey "^R" history-incremental-search-backward
 bindkey "^[[R~" history-incremental-search-forward
@@ -27,8 +26,8 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
-bindkey "^[[3~" delete-char
-bindkey "3~" kill-word
+bindkey "^[[3~" delete-char # ␡
+bindkey "3~" kill-word # ⌥+␡
 
 # These two initialize the completion system,
 # providing the case-sensitive expansion
