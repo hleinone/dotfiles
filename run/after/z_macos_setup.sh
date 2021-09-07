@@ -55,6 +55,7 @@ git clone --recursive https://github.com/espressif/esp-idf.git ~/esp/esp-idf
 ~/esp/esp-idf/install.sh
 
 echo ""
+echo "\033[0;32mTurbo Boost Switcher Pro from: http://tbswitcher.rugarciap.com/\033[0m"
 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
 echo "\033[0;32mInstall Smart Scroll from: https://www.marcmoini.com/sx_en.html\033[0m"
 echo "\033[0;32mInstall Android Studio, AppCode etc. from Jetbrains Toolbox\033[0m"
