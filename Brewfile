@@ -84,6 +84,7 @@ cask "arduino"
 cask "audio-hijack"
 cask "loopback"
 cask "openscad"
+cask "discord"
 
 # Gaming
 cask "steam"
