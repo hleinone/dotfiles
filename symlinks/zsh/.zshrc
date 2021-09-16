@@ -18,6 +18,7 @@ bindkey "^[[1;3C" forward-word # ⌥+→
 bindkey "^[[1;3D" backward-word # ⌥+←
 bindkey "^[[H" beginning-of-line # ⌘+←
 bindkey "^[[F" end-of-line # ⌘+→
+bindkey "^[[U" backward-kill-line # ⌘+␈
 bindkey "^[^M" self-insert-unmeta
 bindkey "^R" history-incremental-search-backward
 bindkey "^[[R~" history-incremental-search-forward
