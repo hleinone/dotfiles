@@ -67,6 +67,7 @@ brew "youtube-dl"
 
 # Desktop apps
 mas "bitwarden", id: 1352778147
+cask "finicky"
 cask "brave-browser"
 cask "google-drive-file-stream"
 cask "kitty"
