@@ -9,8 +9,16 @@ module.exports = {
       match: ["reaktor.com/*", "reaktor.fi/*", "supercell.com/*", "*.reaktor.com/*", "*.reaktor.fi/*", "*.supercell.com/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*"],
       browser: { 
         name: "Brave Browser",
-        profile: "Profile 1", 
+        profile: "Profile 1",
       }
     },
+    {
+      match: "*",
+      browser: { 
+        name: "Brave Browser",
+        profile: "Default",
+      }
+    },
+  ],
   ]
 }
