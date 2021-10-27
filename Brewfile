@@ -70,6 +70,7 @@ brew "youtube-dl"
 mas "bitwarden", id: 1352778147
 cask "finicky"
 cask "brave-browser"
+cask "discord"
 cask "google-drive-file-stream"
 cask "kitty"
 cask "slack"
