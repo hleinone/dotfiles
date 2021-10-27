@@ -52,6 +52,7 @@ mas "xcode", id: 497799835
 cask "fork"
 brew "git"
 cask "gpg-suite-no-mail"
+cask "vysor"
 
 # Tools to make MacOS nicer
 cask "aerial"
