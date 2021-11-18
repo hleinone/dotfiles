@@ -60,6 +60,7 @@ cask "bettertouchtool"
 cask "hyperswitch"
 cask "karabiner-elements"
 cask "stay"
+brew "duti"
 
 # Tools
 brew "apktool"

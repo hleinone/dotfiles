@@ -21,7 +21,6 @@ Setting up a new Mac using [zero.sh](https://github.com/zero-sh/zero.sh).
 * Custom Git configs
 * Setting up SSH
 * Setting up GPG
-* File type associations
 * Jetbrains Toolbox installation
   * Android Studio
   * AppCode
