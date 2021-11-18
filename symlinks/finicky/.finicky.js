@@ -6,7 +6,7 @@ module.exports = {
 
   handlers: [
     {
-      match: ["reaktor.com/*", "reaktor.fi/*", "supercell.com/*", "*.reaktor.com/*", "*.reaktor.fi/*", "*.supercell.com/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*"],
+      match: ["reaktor.com/*", "reaktor.fi/*", "supercell.com/*", "*.reaktor.com/*", "*.reaktor.fi/*", "*.supercell.com/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "supercell.enterprise.slack.com"],
       browser: { 
         name: "Brave Browser",
         profile: "Profile 1",
