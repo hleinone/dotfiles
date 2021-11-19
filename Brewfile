@@ -39,6 +39,9 @@ brew "cmake"
 brew "ninja"
 brew "dfu-util"
 
+# Fonts
+cask "font-meslo-lg-nerd-font"
+
 # Editors & IDEs
 cask "jetbrains-toolbox"
 cask "sublime-text"
