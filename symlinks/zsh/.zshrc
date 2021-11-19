@@ -51,6 +51,9 @@ if ! zgen saved; then
   zgen save
 fi
 
+PROCESS_NAME=$(ps -p $PPID -o comm=)
+PARENT_PROCESS_NAME=$(basename "$PROCESS_NAME")
+
 # Load nodenv
 lazyload nodenv $(ls -1 $HOME/.nodenv/shims) -- 'eval "$(nodenv init -)"'
 
@@ -60,7 +63,6 @@ lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH"
 # Load rbenv
 lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
 # Eager load if Android Studio
-PARENT_PROCESS_NAME=$(basename "$(ps -p $PPID -o comm=)")
 if [[ "$PARENT_PROCESS_NAME" == "studio" ]] then
   rbenv
 fi
@@ -68,6 +70,16 @@ fi
 # Load pyenv
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
 alias brew="env PATH="${PATH//$HOME\/.pyenv\/shims:/}" brew"
+
+# Load goenv
+eval "$(goenv init -)"
+LOAD_GOENV='eval "$(goenv init -)"'
+lazyload goenv $(ls -1 $HOME/.goenv/shims) -- $LOAD_GOENV
+# Eager load if VSCode
+if [[ "$PROCESS_NAME" == *"Visual Studio Code"* && "$PARENT_PROCESS_NAME" == "Electron" ]] then
+  eval "$LOAD_GOENV"
+fi
+alias code="eval $LOAD_GOENV;code"
 
 # Include mysql-client
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"

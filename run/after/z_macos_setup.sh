@@ -37,6 +37,11 @@ LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
 rbenv install "$LATEST_RUBY"
 rbenv global "$LATEST_RUBY"
 
+echo "Installing latest Go globally using goenv…"
+LATEST_GO="$(goenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
+goenv install "$LATEST_GO"
+goenv global "$LATEST_GO"
+
 echo "Setting up latest Java globally using jenv…"
 for java in /Library/Java/JavaVirtualMachines/*; do
   jenv add "$java/Contents/Home/"
