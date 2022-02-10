@@ -38,17 +38,21 @@ compinit
 # This sets the case insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
-# load zgen
-source "$HOME/.zgen/zgen.zsh"
+# load zgenom
+source "$HOME/.zgenom/zgenom.zsh"
+
+# Check for plugin and zgenom updates every 7 days
+# This does not increase the startup time.
+zgenom autoupdate
 
 # if the init script doesn't exist
-if ! zgen saved; then
+if ! zgenom saved; then
 
   # specify plugins here
-  zgen load qoomon/zsh-lazyload
+  zgenom load qoomon/zsh-lazyload
 
   # generate the init script from plugins above
-  zgen save
+  zgenom save
 fi
 
 PROCESS_NAME=$(ps -p $PPID -o comm=)
