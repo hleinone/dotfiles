@@ -6,7 +6,15 @@ module.exports = {
 
   handlers: [
     {
-      match: ["reaktor.com/*", "reaktor.fi/*", "supercell.com/*", "*.reaktor.com/*", "*.reaktor.fi/*", "*.supercell.com/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "supercell.enterprise.slack.com"],
+      match: ["reaktor.com/*", "*.reaktor.com/*", "reaktor.fi/*", "*.reaktor.fi/*", "sites.google.com/reaktor.fi/*", "supercell.com/*", "*.supercell.com/*", "labycore.net/*", "*.labycore.net/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "reaktor.slack.com/*", "supercell.enterprise.slack.com/*", "supercellcom.atlassian.net/*", "supercell.zoom.us/*"],
+      browser: { 
+        name: "Brave Browser",
+        profile: "Profile 1",
+      }
+    },
+    {
+      // Open links in work profile when the option key is pressed
+      match: () => finicky.getKeys().option,
       browser: { 
         name: "Brave Browser",
         profile: "Profile 1",
