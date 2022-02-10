@@ -97,6 +97,7 @@ duti -s com.sublimetext.4 .pom all
 # File type associations for VLC
 duti -s org.videolan.vlc .wav all
 duti -s org.videolan.vlc .3gp all
+duti -s org.videolan.vlc .webm all
 
 >&2 echo ""
 >&2 echo "\033[0;32mTurbo Boost Switcher Pro from: http://tbswitcher.rugarciap.com/\033[0m"
