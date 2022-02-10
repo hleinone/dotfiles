@@ -39,7 +39,7 @@ compinit
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
 # load zgen
-source "${HOME}/.zgen/zgen.zsh"
+source "$HOME/.zgen/zgen.zsh"
 
 # if the init script doesn't exist
 if ! zgen saved; then

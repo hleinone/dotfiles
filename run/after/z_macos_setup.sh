@@ -24,8 +24,8 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
 
 >&2 echo "Installing latest Node globally using nodenv…"
 LATEST_NODE="$(nodenv install -l | ggrep -E '^[0-9\.]+$' | tail -1)"
-nodenv install $LATEST_NODE
-nodenv global $LATEST_NODE
+nodenv install "$LATEST_NODE"
+nodenv global "$LATEST_NODE"
 
 >&2 echo "Installing latest Python globally using pyenv…"
 LATEST_PYTHON="$(pyenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
