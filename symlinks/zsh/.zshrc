@@ -14,6 +14,11 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export JAVA_HOME=""
 
+# History
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+
 bindkey "^[[1;3C" forward-word # ⌥+→
 bindkey "^[[1;3D" backward-word # ⌥+←
 bindkey "^[[H" beginning-of-line # ⌘+←
