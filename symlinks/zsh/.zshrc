@@ -19,6 +19,10 @@ setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
 
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
 bindkey "^[[1;3C" forward-word # ⌥+→
 bindkey "^[[1;3D" backward-word # ⌥+←
 bindkey "^[[H" beginning-of-line # ⌘+←
@@ -27,9 +31,6 @@ bindkey "^[[U" backward-kill-line # ⌘+␈
 bindkey "^[^M" self-insert-unmeta
 bindkey "^R" history-incremental-search-backward
 bindkey "^[[R~" history-incremental-search-forward
-autoload -U history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 bindkey "^[[3~" delete-char # ␡
@@ -73,6 +74,7 @@ lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH"
 lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
 # Eager load if Android Studio
 if [[ "$PARENT_PROCESS_NAME" == "studio" ]] then
+  >&2 echo "Eager load rbenv"
   rbenv
 fi
 
@@ -85,6 +87,7 @@ LOAD_GOENV='eval "$(goenv init -)"'
 lazyload goenv $(ls -1 $HOME/.goenv/shims) -- $LOAD_GOENV
 # Eager load if VSCode
 if [[ "$PROCESS_NAME" == *"Visual Studio Code"* && "$PARENT_PROCESS_NAME" == "Electron" ]] then
+  >&2 echo "Eager load goenv"
   eval "$LOAD_GOENV"
 fi
 alias code='eval "$LOAD_GOENV";code'
