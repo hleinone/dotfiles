@@ -43,6 +43,7 @@ brew "dfu-util"
 
 # Fonts
 cask "font-meslo-lg-nerd-font"
+cask "font-powerline-symbols"
 
 # Editors & IDEs
 cask "jetbrains-toolbox"
@@ -52,8 +53,10 @@ cask "visual-studio-code"
 mas "xcode", id: 497799835
 
 # Development tools
+cask "docker"
 cask "fork"
 brew "git"
+cask "google-cloud-sdk"
 cask "gpg-suite-no-mail"
 cask "vysor"
 
@@ -67,7 +70,6 @@ brew "duti"
 
 # Tools
 brew "apktool"
-cask "docker"
 brew "youtube-dl"
 
 # Desktop apps
@@ -76,6 +78,7 @@ cask "finicky"
 cask "brave-browser"
 cask "discord"
 cask "google-drive-file-stream"
+cask "kap"
 cask "kitty"
 cask "slack"
 cask "vlc"
