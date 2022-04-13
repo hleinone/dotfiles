@@ -65,6 +65,7 @@ cask "aerial"
 cask "bettertouchtool"
 cask "hyperswitch"
 cask "karabiner-elements"
+cask "notunes"
 cask "stay"
 brew "duti"
 
