@@ -1,5 +1,3 @@
-eval "$(starship init zsh)"
-
 # Load aliases.
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
@@ -103,3 +101,5 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
+eval "$(starship init zsh)"
