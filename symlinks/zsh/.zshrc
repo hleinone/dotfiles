@@ -94,6 +94,9 @@ alias code='eval "$LOAD_GOENV";code'
 # Include mysql-client
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
+# Include Pub executables
+export PATH="$HOME/.pub-cache/bin:$PATH"
+
 # Load thefuck
 lazyload fuck -- 'eval "$(thefuck --alias)"'
 
