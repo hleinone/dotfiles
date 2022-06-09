@@ -76,6 +76,11 @@ if [[ "$PARENT_PROCESS_NAME" == "studio" || "$PARENT_PROCESS_NAME" == "Code Help
   >&2 echo "Eager load rbenv"
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"
 fi
+# Eager load if VSCode
+if [[ "$PROCESS_NAME" == *"Visual Studio Code"* && "$PARENT_PROCESS_NAME" == "Electron" ]] then
+  >&2 echo "Eager load rbenv"
+  rbenv
+fi
 
 # Load pyenv
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
