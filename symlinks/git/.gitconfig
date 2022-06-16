@@ -1,9 +1,10 @@
 [user]
 	name = Hannu Leinonen
 	email = hleinone@gmail.com
+	signingkey = 14842C9777E5A984
 [core]
 	excludesfile = ~/.gitignore_global
 [commit]
-	gpgSign = false
+	gpgSign = true
 [init]
 	defaultBranch = main
