@@ -11,6 +11,7 @@ export LANG=en_US.UTF-8
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export JAVA_HOME=""
+export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 
 # History
 setopt appendhistory
@@ -70,10 +71,10 @@ lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH"
 
 # Load rbenv
 lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
-# Eager load if Android Studio
-if [[ "$PARENT_PROCESS_NAME" == "studio" ]] then
+# Eager load if Android Studio or VSCode
+if [[ "$PARENT_PROCESS_NAME" == "studio" || "$PARENT_PROCESS_NAME" == "Code Helper (Renderer)" ]] then
   >&2 echo "Eager load rbenv"
-  rbenv
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"
 fi
 
 # Load pyenv
