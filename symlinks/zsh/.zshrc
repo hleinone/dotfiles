@@ -78,7 +78,7 @@ fi
 
 # Load pyenv
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
-alias brew="env PATH="${PATH//$HOME\/.pyenv\/shims:/}" brew"
+alias brew="env PATH=\"${PATH//$HOME\/.pyenv\/shims:/}\" brew"
 
 # Load goenv
 LOAD_GOENV='eval "$(goenv init -)"'
