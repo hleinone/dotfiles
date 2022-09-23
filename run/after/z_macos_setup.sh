@@ -93,6 +93,7 @@ duti -s com.sublimetext.4 .toml all
 duti -s com.sublimetext.4 .bat all
 duti -s com.sublimetext.4 .svg all
 duti -s com.sublimetext.4 .pom all
+duti -s com.sublimetext.4 .proto all
 
 # File type associations for VLC
 duti -s org.videolan.vlc .wav all
