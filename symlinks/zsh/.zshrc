@@ -90,11 +90,10 @@ alias brew="env PATH=\"${PATH//$HOME\/.pyenv\/shims:/}\" brew"
 LOAD_GOENV='eval "$(goenv init -)"'
 lazyload goenv $(ls -1 $HOME/.goenv/shims) -- $LOAD_GOENV
 # Eager load if VSCode
-if [[ "$PROCESS_NAME" == *"Visual Studio Code"* && "$PARENT_PROCESS_NAME" == "Electron" ]] then
+if [[ "$PROCESS_NAME" == *"Visual Studio Code"* ]] then
   >&2 echo "Eager load goenv"
   eval "$LOAD_GOENV"
 fi
-alias code='eval "$LOAD_GOENV";code'
 
 # Include mysql-client
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
