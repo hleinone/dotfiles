@@ -37,8 +37,14 @@ bindkey "3~" kill-word # ⌥+␡
 
 # These two initialize the completion system,
 # providing the case-sensitive expansion
-autoload -Uz compinit
-compinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+#autoload -Uz compinit
+#compinit
 
 # This sets the case insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
