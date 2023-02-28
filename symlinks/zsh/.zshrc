@@ -86,8 +86,8 @@ fi
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) brew -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
 
 # Load goenv
-LOAD_GOENV='eval "$(goenv init -)"'
-lazyload goenv $(ls -1 $HOME/.goenv/shims) -- $LOAD_GOENV
+lazyload goenv $(ls -1 $HOME/.goenv/shims) code -- 'eval "$(goenv init -)"'
+
 # Eager load if VSCode
 if [[ "$PROCESS_NAME" == *"Visual Studio Code"* ]] then
   >&2 echo "Eager load goenv"
