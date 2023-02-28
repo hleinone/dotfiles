@@ -71,16 +71,6 @@ lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH"
 
 # Load rbenv
 lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
-# Eager load if Android Studio or VSCode
-if [[ "$PARENT_PROCESS_NAME" == "studio" || "$PARENT_PROCESS_NAME" == "Code Helper (Renderer)" ]] then
-  >&2 echo "Eager load rbenv"
-  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"
-fi
-# Eager load if VSCode
-if [[ "$PROCESS_NAME" == *"Visual Studio Code"* && "$PARENT_PROCESS_NAME" == "Electron" ]] then
-  >&2 echo "Eager load rbenv"
-  rbenv
-fi
 
 # Load pyenv
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) brew -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
@@ -90,8 +80,9 @@ lazyload goenv $(ls -1 $HOME/.goenv/shims) code -- 'eval "$(goenv init -)"'
 
 # Eager load if VSCode
 if [[ "$PROCESS_NAME" == *"Visual Studio Code"* ]] then
-  >&2 echo "Eager load goenv"
-  eval "$LOAD_GOENV"
+  >&2 echo "Eager load goenv & rbenv"
+  eval 'eval "$(goenv init -)"'
+  eval 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
 fi
 
 # Include mysql-client
