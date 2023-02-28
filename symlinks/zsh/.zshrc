@@ -67,7 +67,14 @@ if ! zgenom saved; then
 fi
 
 PROCESS_NAME=$(ps -p $PPID -o comm=)
-PARENT_PROCESS_NAME=$(basename "$PROCESS_NAME")
+if [[ "${PROCESS_NAME[1]}" == "/" ]] then
+  PARENT_PROCESS_NAME=$(basename "$PROCESS_NAME")
+else
+  PARENT_PROCESS_NAME="$PROCESS_NAME"
+fi
+
+echo "$PROCESS_NAME" >> "$HOME/.process_name"
+echo "$PARENT_PROCESS_NAME" >> "$HOME/.parent_process_name"
 
 # Load nodenv
 lazyload nodenv $(ls -1 $HOME/.nodenv/shims) -- 'eval "$(nodenv init -)"'
