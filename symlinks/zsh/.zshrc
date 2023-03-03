@@ -113,4 +113,17 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
+# monday
+monday() {
+  # Upgrade everything
+  brew cleanup                  # Remove old versions from the cellar
+  brew upgrade                  # Upgrade most Homebrew packages
+  brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
+  softwareupdate -ia            # Mac's own software update
+  mas upgrade                   # Programmatic App Store update
+
+  # Upgrading gpg needs a restart, so let's do one just in case
+  gpgconf --kill all
+}
+
 eval "$(starship init zsh)"
