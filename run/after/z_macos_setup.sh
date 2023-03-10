@@ -73,6 +73,7 @@ duti -s com.sublimetext.4 .properties all
 duti -s com.sublimetext.4 .gradle all
 duti -s com.sublimetext.4 .kt all
 duti -s com.sublimetext.4 .java all
+duti -s com.sublimetext.4 .json all
 duti -s com.sublimetext.4 .swift all
 duti -s com.sublimetext.4 .h all
 duti -s com.sublimetext.4 .cpp all
