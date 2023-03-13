@@ -74,18 +74,24 @@ duti -s com.sublimetext.4 .gradle all
 duti -s com.sublimetext.4 .kt all
 duti -s com.sublimetext.4 .java all
 duti -s com.sublimetext.4 .json all
+duti -s com.sublimetext.4 .strings all
 duti -s com.sublimetext.4 .swift all
 duti -s com.sublimetext.4 .h all
+duti -s com.sublimetext.4 .c all
 duti -s com.sublimetext.4 .cpp all
 duti -s com.sublimetext.4 .m all
+duti -s com.sublimetext.4 .mm all
+duti -s com.sublimetext.4 .cmake all
 duti -s com.sublimetext.4 .pch all
 duti -s com.sublimetext.4 .plist all
 duti -s com.sublimetext.4 LICENSE all
 duti -s com.sublimetext.4 .py all
 duti -s com.sublimetext.4 Podfile all
 duti -s com.sublimetext.4 Brewfile all
+duti -s com.sublimetext.4 .rst all
 duti -s com.sublimetext.4 .js all
 duti -s com.sublimetext.4 .ts all
+duti -s com.sublimetext.4 .go all
 duti -s com.sublimetext.4 .gitignore all
 duti -s com.sublimetext.4 .gitconfig all
 duti -s com.sublimetext.4 .zshrc all
@@ -95,6 +101,7 @@ duti -s com.sublimetext.4 .bat all
 duti -s com.sublimetext.4 .svg all
 duti -s com.sublimetext.4 .pom all
 duti -s com.sublimetext.4 .proto all
+duti -s com.sublimetext.4 .log all
 
 # File type associations for VLC
 duti -s org.videolan.vlc .wav all
