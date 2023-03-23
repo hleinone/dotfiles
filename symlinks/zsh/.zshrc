@@ -14,9 +14,7 @@ export JAVA_HOME=""
 export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 
 # History
-setopt appendhistory
-setopt sharehistory
-setopt incappendhistory
+setopt appendhistory sharehistory incappendhistory
 
 autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -76,19 +74,10 @@ fi
 echo "$PROCESS_NAME" >> "$HOME/.process_name"
 echo "$PARENT_PROCESS_NAME" >> "$HOME/.parent_process_name"
 
-# Load nodenv
 lazyload nodenv $(ls -1 $HOME/.nodenv/shims) -- 'eval "$(nodenv init -)"'
-
-# Load jenv
 lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'export PATH="$HOME/.jenv/bin:$PATH";eval "$(jenv init -)"'
-
-# Load rbenv
 lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
-
-# Load pyenv
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) brew -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
-
-# Load goenv
 lazyload goenv $(ls -1 $HOME/.goenv/shims) code -- 'eval "$(goenv init -)"'
 
 # Eager load if VSCode
@@ -118,7 +107,7 @@ monday() {
   # Upgrade everything
   brew cleanup                  # Remove old versions from the cellar
   brew upgrade                  # Upgrade most Homebrew packages
-  brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
+  #brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
   softwareupdate -ia            # Mac's own software update
   mas upgrade                   # Programmatic App Store update
 
