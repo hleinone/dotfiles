@@ -88,7 +88,7 @@ lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter -- 'export RUBY_CONFIGURE_OPT
 lazyload pyenv $(ls -1 $HOME/.pyenv/shims) brew -- 'export PATH="$HOME/.pyenv/bin:$PATH";eval "$(pyenv init -)"'
 lazyload goenv $(ls -1 $HOME/.goenv/shims) code -- 'eval "$(goenv init -)"'
 
-# Eager load if VSCode
+# Eager load if Visual Studio Code
 if [[ "$PROCESS_NAME" == *"Visual Studio Code"* ]] then
   >&2 echo "Eager load goenv & rbenv"
   eval 'eval "$(goenv init -)"'
@@ -100,6 +100,9 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # Include Pub executables
 export PATH="$HOME/.pub-cache/bin:$PATH"
+
+# Include grep
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
 # Load thefuck
 lazyload fuck -- 'eval "$(thefuck --alias)"'
