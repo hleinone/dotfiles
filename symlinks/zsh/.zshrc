@@ -17,8 +17,12 @@ export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave B
 setopt appendhistory sharehistory incappendhistory
 
 autoload -Uz history-search-end
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
 bindkey "^[[1;3C" forward-word # ⌥+→
 bindkey "^[[1;3D" backward-word # ⌥+←
@@ -32,6 +36,9 @@ bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 bindkey "^[[3~" delete-char # ␡
 bindkey "3~" kill-word # ⌥+␡
+bindkey "^[[A" up-line-or-beginning-search # ↑
+bindkey "^[[B" down-line-or-beginning-search # ↓
+
 
 # These two initialize the completion system,
 # providing the case-sensitive expansion
@@ -59,6 +66,7 @@ if ! zgenom saved; then
 
   # specify plugins here
   zgenom load qoomon/zsh-lazyload
+  zgenom load zsh-users/zsh-autosuggestions
 
   # generate the init script from plugins above
   zgenom save
