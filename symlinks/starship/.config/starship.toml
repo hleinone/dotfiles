@@ -7,5 +7,7 @@ $git_state\
 $git_status\
 $character"""
 
+command_timeout = 500
+
 [git_branch]
 format = "[$symbol$branch]($style) "
