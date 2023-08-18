@@ -78,7 +78,7 @@ mas "bitwarden", id: 1352778147
 cask "finicky"
 cask "brave-browser"
 cask "discord"
-cask "google-drive-file-stream"
+cask "google-drive"
 cask "kap"
 cask "kitty"
 cask "slack"
