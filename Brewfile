@@ -63,7 +63,7 @@ cask "vysor"
 # Tools to make MacOS nicer
 cask "aerial"
 cask "bettertouchtool"
-cask "hyperswitch"
+cask "alt-tab"
 cask "karabiner-elements"
 cask "notunes"
 cask "stay"
