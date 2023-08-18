@@ -124,6 +124,33 @@ monday() {
 
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all
+
+  >&2 echo "Installing latest Node globally using nodenv…"
+  LATEST_NODE="$(nodenv install -l | ggrep -E '^[0-9\.]+$' | tail -1)"
+  nodenv install "$LATEST_NODE"
+  nodenv global "$LATEST_NODE"
+
+  >&2 echo "Installing latest Python globally using pyenv…"
+  LATEST_PYTHON="$(pyenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
+  pyenv install "$LATEST_PYTHON"
+  pyenv global "$LATEST_PYTHON"
+
+  >&2 echo "Installing latest Ruby globally using rbenv…"
+  LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
+  rbenv install "$LATEST_RUBY"
+  rbenv global "$LATEST_RUBY"
+
+  >&2 echo "Installing latest Go globally using goenv…"
+  LATEST_GO="$(goenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
+  goenv install "$LATEST_GO"
+  goenv global "$LATEST_GO"
+
+  >&2 echo "Setting up latest Java globally using jenv…"
+  for java in /Library/Java/JavaVirtualMachines/*; do
+    jenv add "$java/Contents/Home/"
+  done
+  LATEST_JAVA="$(jenv versions --bare | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
+  jenv global "$LATEST_JAVA"
 }
 
 eval "$(starship init zsh)"
