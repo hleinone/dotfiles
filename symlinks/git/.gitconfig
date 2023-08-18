@@ -5,7 +5,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [commit]
-	gpgSign = true
+	gpgsign = true
 [init]
 	defaultBranch = main
 [filter "lfs"]
