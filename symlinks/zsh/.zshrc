@@ -102,6 +102,9 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 # Include Pub executables
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
+# Include Mint executables
+export PATH="$HOME/.mint/bin:$PATH"
+
 # Include grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 

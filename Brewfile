@@ -40,6 +40,7 @@ brew "platformio"
 brew "cmake"
 brew "ninja"
 brew "dfu-util"
+brew "mint"
 
 # Fonts
 cask "font-meslo-lg-nerd-font"
