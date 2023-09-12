@@ -57,6 +57,7 @@ mas "xcode", id: 497799835
 cask "docker"
 cask "fork"
 brew "git"
+brew "git-lfs"
 cask "google-cloud-sdk"
 cask "gpg-suite-no-mail"
 cask "vysor"
