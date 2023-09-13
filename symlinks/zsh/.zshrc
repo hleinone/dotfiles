@@ -131,22 +131,22 @@ monday() {
 
   >&2 echo "Installing latest Node globally using nodenv…"
   LATEST_NODE="$(nodenv install -l | ggrep -E '^[0-9\.]+$' | tail -1)"
-  nodenv install "$LATEST_NODE"
+  nodenv install -s "$LATEST_NODE"
   nodenv global "$LATEST_NODE"
 
   >&2 echo "Installing latest Python globally using pyenv…"
   LATEST_PYTHON="$(pyenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
-  pyenv install "$LATEST_PYTHON"
+  pyenv install -s "$LATEST_PYTHON"
   pyenv global "$LATEST_PYTHON"
 
   >&2 echo "Installing latest Ruby globally using rbenv…"
   LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
-  rbenv install "$LATEST_RUBY"
+  rbenv install -s "$LATEST_RUBY"
   rbenv global "$LATEST_RUBY"
 
   >&2 echo "Installing latest Go globally using goenv…"
   LATEST_GO="$(goenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
-  goenv install "$LATEST_GO"
+  goenv install -s "$LATEST_GO"
   goenv global "$LATEST_GO"
 
   >&2 echo "Setting up latest Java globally using jenv…"
