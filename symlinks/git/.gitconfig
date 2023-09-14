@@ -13,5 +13,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[branch]
+	autoSetupRebase = always
 [push]
+	default = current
 	autoSetupRemote = true
