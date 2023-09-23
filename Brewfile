@@ -61,6 +61,8 @@ brew "git-lfs"
 cask "google-cloud-sdk"
 cask "gpg-suite-no-mail"
 cask "vysor"
+cask "rapidapi"
+brew "apktool"
 
 # Tools to make MacOS nicer
 cask "aerial"
@@ -72,7 +74,6 @@ cask "stay"
 brew "duti"
 
 # Tools
-brew "apktool"
 brew "youtube-dl"
 
 # Desktop apps
