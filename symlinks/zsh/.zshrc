@@ -96,9 +96,6 @@ if [[ "$PROCESS_NAME" == *"Visual Studio Code"* ]] then
   eval 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
 fi
 
-# Include mysql-client
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
 # Include Pub executables
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
@@ -106,7 +103,9 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 export PATH="$HOME/.mint/bin:$PATH"
 
 # Include grep
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="$HOMEBREW_PREFIX/var/homebrew/linked/grep/libexec/gnubin:$PATH"
+# Include find
+export PATH="$HOMEBREW_PREFIX/var/homebrew/linked/findutils/libexec/gnubin:$PATH"
 
 # Load thefuck
 lazyload fuck -- 'eval "$(thefuck --alias)"'
