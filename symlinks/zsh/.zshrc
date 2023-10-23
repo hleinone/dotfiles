@@ -122,7 +122,7 @@ monday() {
   brew cleanup                  # Remove old versions from the cellar
   brew upgrade                  # Upgrade most Homebrew packages
   #brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
-  softwareupdate -ia            # Mac's own software update
+  #softwareupdate -ia            # Mac's own software update
   mas upgrade                   # Programmatic App Store update
 
   # Upgrading gpg needs a restart, so let's do one just in case
