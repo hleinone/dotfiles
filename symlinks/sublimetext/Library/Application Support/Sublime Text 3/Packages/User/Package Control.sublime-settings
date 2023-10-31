@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
-		"Pretty JSON"
+		"Package Control",
+		"Pretty JSON",
 	],
 }
