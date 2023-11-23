@@ -11,14 +11,7 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
     git clone https://github.com/Reflejo/pam-touchID.git
     cd pam-touchID
     sudo make install
-    set +x
-
-    cd -
-    >&2 echo "Installing PAM Watch ID…"
-    set -x
-    git clone https://github.com/biscuitehh/pam-watchid.git
-    cd pam-watchid
-    sudo make install
+    grep -Fxq 'auth       sufficient     pam_touchid.so "reason=execute a command as root"' /etc/pam.d/sudo || sudo sed -i '' '1i\'$'\n''auth       sufficient     pam_touchid.so "reason=execute a command as root"' /etc/pam.d/sudo
     set +x
 )
 
@@ -109,10 +102,8 @@ duti -s org.videolan.vlc .3gp all
 duti -s org.videolan.vlc .webm all
 
 >&2 echo ""
->&2 echo "\033[0;32mTurbo Boost Switcher Pro from: http://tbswitcher.rugarciap.com/\033[0m"
 >&2 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
 >&2 echo "\033[0;32mInstall Font Tools for Xcode from: https://developer.apple.com/download/all/?q=font\033[0m"
->&2 echo "\033[0;32mInstall Smart Scroll from: https://www.marcmoini.com/sx_en.html\033[0m"
 >&2 echo "\033[0;32mInstall Android Studio, AppCode etc. from Jetbrains Toolbox\033[0m"
 >&2 echo ""
 >&2 echo "\033[0;32mTurn on VSCode settings sync\033[0m"
