@@ -114,10 +114,12 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 # Include Mint executables
 export PATH="$HOME/.mint/bin:$PATH"
 
-# Include grep
+# Include GNU grep
 export PATH="$HOMEBREW_PREFIX/var/homebrew/linked/grep/libexec/gnubin:$PATH"
-# Include find
+# Include GNU find
 export PATH="$HOMEBREW_PREFIX/var/homebrew/linked/findutils/libexec/gnubin:$PATH"
+# Include GNU sed
+export PATH="$HOMEBREW_PREFIX/var/homebrew/linked/gnu-sed/libexec/gnubin:$PATH"
 
 # Load thefuck
 lazyload fuck -- 'eval "$(thefuck --alias)"'
