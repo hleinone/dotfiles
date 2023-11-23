@@ -23,8 +23,11 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
 # GNU
+brew "coreutils"
 brew "findutils"
+brew "gawk"
 brew "gnu-sed"
+brew "gnu-tar"
 brew "grep"
 
 # Programming environments
