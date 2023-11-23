@@ -140,10 +140,7 @@ monday() {
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all
 
-  >&2 echo "Installing latest Node globally using nodenv…"
-  LATEST_NODE="$(nodenv install -l | ggrep -E '^[0-9\.]+$' | tail -1)"
-  nodenv install -s "$LATEST_NODE"
-  nodenv global "$LATEST_NODE"
+  nodenv global system
 
   >&2 echo "Setting up latest Java globally using jenv…"
   for java in /Library/Java/JavaVirtualMachines/*; do
