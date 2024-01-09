@@ -10,6 +10,7 @@ tap "microsoft/git"
 brew "mas"
 
 # Command line
+brew "starship"
 brew "bash"
 brew "ffmpeg"
 brew "imagemagick"
