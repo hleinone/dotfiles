@@ -3,23 +3,6 @@ if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
 
-lazy() {
-  export PATH="$PATH:$HOME/.nodenv/shims:$HOME/.jenv/shims:$HOME/.rbenv/shims:$HOME/.pyenv/shims:$HOME/.goenv/shims"
-  lazyload nodenv $(ls -1 $HOME/.nodenv/shims) -- 'eval "$(nodenv init -)"'
-  lazyload jenv $(ls -1 $HOME/.jenv/shims) -- 'eval "$(jenv init -)"'
-  lazyload rbenv $(ls -1 $HOME/.rbenv/shims) flutter xcodebuild -- 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"'
-  lazyload pyenv $(ls -1 $HOME/.pyenv/shims) brew -- 'eval "$(pyenv init -)"'
-  lazyload goenv $(ls -1 $HOME/.goenv/shims) -- 'eval "$(goenv init -)"'
-}
-
-eager() {
-  eval "$(nodenv init -)"
-  eval "$(jenv init -)"
-  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)";eval "$(rbenv init -)"
-  eval "$(pyenv init -)"
-  eval "$(goenv init -)"
-}
-
 # Colors
 export CLICOLOR=1
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
@@ -100,14 +83,6 @@ fi
 echo "$PROCESS_NAME" >> "$HOME/.process_name"
 echo "$PARENT_PROCESS_NAME" >> "$HOME/.parent_process_name"
 
-# Lazy load nodenv jenv rbenv pyenv goenv
-lazy
-
-# Eager load if Visual Studio Code
-if [[ "$PROCESS_NAME" == *"Visual Studio Code"* ]] then
-  eager
-fi
-
 # Include Pub executables
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
@@ -138,30 +113,6 @@ monday() {
 
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all
-
-  nodenv global system
-
-  >&2 echo "Setting up latest Java globally using jenv…"
-  for java in /Library/Java/JavaVirtualMachines/*; do
-    jenv add "$java/Contents/Home/"
-  done
-  LATEST_JAVA="$(jenv versions --bare | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
-  jenv global "$LATEST_JAVA"
-
-  >&2 echo "Installing latest Ruby globally using rbenv…"
-  LATEST_RUBY="$(rbenv install -L | ggrep -E '^[0-9\.]+$' | tail -1)"
-  rbenv install -s "$LATEST_RUBY"
-  rbenv global "$LATEST_RUBY"
-
-  >&2 echo "Installing latest Python globally using pyenv…"
-  LATEST_PYTHON="$(pyenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
-  pyenv install -s "$LATEST_PYTHON"
-  pyenv global "$LATEST_PYTHON"
-
-  >&2 echo "Installing latest Go globally using goenv…"
-  LATEST_GO="$(goenv install -l | sed 's/^ *//g' | ggrep -E '^[0-9\.]+$' | tail -1)"
-  goenv install -s "$LATEST_GO"
-  goenv global "$LATEST_GO"
 }
 
 eval "$(starship init zsh)"
