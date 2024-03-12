@@ -6,7 +6,7 @@ module.exports = {
 
   handlers: [
     {
-      match: ["reaktor.com/*", "*.reaktor.com/*", "reaktor.fi/*", "*.reaktor.fi/*", "sites.google.com/reaktor.fi/*", "supercell.com/*", "*.supercell.com/*", "labycore.net/*", "*.labycore.net/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "reaktor.slack.com/*", "supercell.enterprise.slack.com/*", "supercellcom.atlassian.net/*", "supercell.zoom.us/*", "linear.app/supercell/*"],
+      match: ["reaktor.com/*", "*.reaktor.com/*", "reaktor.fi/*", "*.reaktor.fi/*", "sites.google.com/reaktor.fi/*", "supercell.com/*", "*.supercell.com/*", "labycore.net/*", "*.labycore.net/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "reaktor.slack.com/*", "supercell.enterprise.slack.com/*", "supercellcom.atlassian.net/*", "supercell.zoom.us/*", "linear.app/supercell/*", "supercell.sentry.io/*"],
       browser: { 
         name: "Brave Browser",
         profile: "Profile 1",
