@@ -6,4 +6,5 @@
 		"Vintage",
 	],
 	"draw_white_space": ["all"],
+	"index_files": true,
 }
