@@ -77,6 +77,7 @@ cask "karabiner-elements"
 cask "notunes"
 cask "stay"
 brew "duti"
+brew "maccy"
 
 # Tools
 brew "youtube-dl"
