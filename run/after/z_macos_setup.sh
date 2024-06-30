@@ -11,7 +11,7 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
     git clone https://github.com/Reflejo/pam-touchID.git
     cd pam-touchID
     sudo make install
-    grep -Fxq 'auth       sufficient     pam_touchid.so "reason=execute a command as root"' /etc/pam.d/sudo || sudo sed -i '' '1i\'$'\n''auth       sufficient     pam_touchid.so "reason=execute a command as root"' /etc/pam.d/sudo
+    grep -Fxq 'auth       sufficient     pam_touchid.so "reason=execute a command as root"' /etc/pam.d/sudo || printf '2iauth       sufficient     pam_touchid.so "reason=execute a command as root"\n' | sudo sed -i -f - /etc/pam.d/sudo
     set +x
 )
 
