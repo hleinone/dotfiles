@@ -10,3 +10,5 @@ alias icat='kitty +kitten icat'
 alias d='kitty +kitten diff'
 
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+alias flutter='export FLUTTER_ROOT="$(mise where flutter)"; flutter'
