@@ -9,5 +9,5 @@ chflags nohidden ~/Library
 
 # Install Rosetta, else apply-user-defaults will fail
 if [ "$(uname -m)" = "arm64" ]; then
-  softwareupdate --install-rosetta
+  softwareupdate --install-rosetta --agree-to-license
 fi
