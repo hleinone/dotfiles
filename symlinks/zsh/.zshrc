@@ -73,7 +73,7 @@ if ! zgenom saved; then
   zgenom save
 fi
 
-export FLUTTER_ROOT="$(mise where flutter)"
+#export FLUTTER_ROOT="$(mise where flutter)"
 
 PROCESS_NAME=$(ps -p $PPID -o comm=)
 if [[ "${PROCESS_NAME[1]}" == "/" ]] then

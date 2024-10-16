@@ -31,6 +31,4 @@ Setting up a new Mac using [zero.sh](https://github.com/zero-sh/zero.sh).
   * Loopback
   * Sketch
   * Smart Scroll
-  * Turbo Boost Switcher Pro
 * Change screen saver to Aerial
-* Touch bar settings
