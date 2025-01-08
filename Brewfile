@@ -70,7 +70,7 @@ brew "duti"
 cask "maccy"
 
 # Tools
-brew "youtube-dl"
+brew "yt-dlp"
 
 # Desktop apps
 mas "bitwarden", id: 1352778147
