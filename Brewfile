@@ -88,6 +88,7 @@ cask "zoom"
 cask "figma"
 cask "gimp"
 cask "sketch"
+cask "affinity-designer"
 
 # Non-essential hobby apps
 cask "arduino"
