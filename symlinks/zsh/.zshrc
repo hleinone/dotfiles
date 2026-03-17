@@ -67,7 +67,6 @@ if ! zgenom saved; then
   # specify plugins here
   zgenom load qoomon/zsh-lazyload
   zgenom load zsh-users/zsh-autosuggestions
-  zgenom load gradle/gradle-completion
 
   # generate the init script from plugins above
   zgenom save
