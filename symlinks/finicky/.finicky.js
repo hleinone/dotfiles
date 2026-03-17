@@ -9,13 +9,16 @@
  */
 export default {
   defaultBrowser: "Brave Browser",
+  options: {
+    logRequests: false
+  },
 
   handlers: [
     {
-      match: ["reaktor.com/*", "*.reaktor.com/*", "reaktor.fi/*", "*.reaktor.fi/*", "sites.google.com/reaktor.fi/*", "supercell.com/*", "*.supercell.com/*", "labycore.net/*", "*.labycore.net/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "reaktor.slack.com/*", "supercell.enterprise.slack.com/*", "supercellcom.atlassian.net/*", "supercell.zoom.us/*", "linear.app/supercell/*", "supercell.sentry.io/*"],
+      match: ["reaktor.com/*", "*.reaktor.com/*", "reaktor.fi/*", "*.reaktor.fi/*", "sites.google.com/reaktor.fi/*", "supercell.com/*", "*.supercell.com/*", "labycore.net/*", "*.labycore.net/*", "supercell.monday.com/*", "github.com/supercell/*", "github.com/reaktor/*", "reaktor.slack.com/*", "supercell.enterprise.slack.com/*", "supercellcom.atlassian.net/*", "supercell.zoom.us/*", "linear.app/supercell/*", "supercell.sentry.io/*", "github.com/supercellcom/*", "supercell.pagerduty.com/*", "supercell.okta.com/*"],
       browser: { 
         name: "Brave Browser",
-        profile: "Profile 1",
+        profile: "Work",
       }
     },
     {
@@ -23,14 +26,14 @@ export default {
       match: () => finicky.getModifierKeys().option,
       browser: { 
         name: "Brave Browser",
-        profile: "Profile 1",
+        profile: "Work",
       }
     },
     {
       match: "*",
       browser: { 
         name: "Brave Browser",
-        profile: "Default",
+        profile: "Hannu",
       }
     },
   ]
