@@ -84,6 +84,9 @@ fi
 echo "$PROCESS_NAME" >> "$HOME/.process_name"
 echo "$PARENT_PROCESS_NAME" >> "$HOME/.parent_process_name"
 
+# Include Antigravity executables
+export PATH="/Users/hannu.leinonen/.antigravity/antigravity/bin:$PATH"
+
 # Include Pub executables
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
