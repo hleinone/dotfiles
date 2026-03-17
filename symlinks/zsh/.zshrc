@@ -109,9 +109,8 @@ monday() {
   # Upgrade everything
   brew cleanup                  # Remove old versions from the cellar
   brew upgrade                  # Upgrade most Homebrew packages
-  #brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
-  #softwareupdate -ia            # Mac's own software update
   mas upgrade                   # Programmatic App Store update
+  mise upgrade                  # Upgrade tools installed with mise
 
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all
