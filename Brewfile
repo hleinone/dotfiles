@@ -44,7 +44,7 @@ cask "font-powerline-symbols"
 
 # Editors & IDEs
 cask "jetbrains-toolbox"
-cask "sublime-text"
+cask "zed"
 brew "vim"
 cask "visual-studio-code"
 mas "xcode", id: 497799835

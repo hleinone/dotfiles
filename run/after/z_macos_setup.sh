@@ -21,54 +21,55 @@ mkdir -p ~/esp
 if cd "${HOME}/esp/esp-idf"; then git pull; else git clone --recursive https://github.com/espressif/esp-idf.git "${HOME}/esp/esp-idf"; fi
 ~/esp/esp-idf/install.sh
 
-# File type associations for Sublime Text
-duti -s com.sublimetext.4 .md all
-duti -s com.sublimetext.4 .xml all
-duti -s com.sublimetext.4 .txt all
-duti -s com.sublimetext.4 .json all
-duti -s com.sublimetext.4 .gpx all
-duti -s com.sublimetext.4 .conf all
-duti -s com.sublimetext.4 .csv all
-duti -s com.sublimetext.4 .sh all
-duti -s com.sublimetext.4 .yaml all
-duti -s com.sublimetext.4 .properties all
-duti -s com.sublimetext.4 .gradle all
-duti -s com.sublimetext.4 .kt all
-duti -s com.sublimetext.4 .java all
-duti -s com.sublimetext.4 .json all
-duti -s com.sublimetext.4 .strings all
-duti -s com.sublimetext.4 .swift all
-duti -s com.sublimetext.4 .h all
-duti -s com.sublimetext.4 .c all
-duti -s com.sublimetext.4 .cpp all
-duti -s com.sublimetext.4 .m all
-duti -s com.sublimetext.4 .mm all
-duti -s com.sublimetext.4 .cmake all
-duti -s com.sublimetext.4 .pch all
-duti -s com.sublimetext.4 .plist all
-duti -s com.sublimetext.4 LICENSE all
-duti -s com.sublimetext.4 .py all
-duti -s com.sublimetext.4 Podfile all
-duti -s com.sublimetext.4 Brewfile all
-duti -s com.sublimetext.4 .rst all
-duti -s com.sublimetext.4 .js all
-duti -s com.sublimetext.4 .ts all
-duti -s com.sublimetext.4 .go all
-duti -s com.sublimetext.4 .gitignore all
-duti -s com.sublimetext.4 .gitconfig all
-duti -s com.sublimetext.4 .zshrc all
-duti -s com.sublimetext.4 .bashrc all
-duti -s com.sublimetext.4 .toml all
-duti -s com.sublimetext.4 .bat all
-duti -s com.sublimetext.4 .svg all
-duti -s com.sublimetext.4 .pom all
-duti -s com.sublimetext.4 .proto all
-duti -s com.sublimetext.4 .log all
+# File type associations for Zed
+duti -s dev.zed.Zed .md all
+duti -s dev.zed.Zed .xml all
+duti -s dev.zed.Zed .txt all
+duti -s dev.zed.Zed .json all
+duti -s dev.zed.Zed .gpx all
+duti -s dev.zed.Zed .conf all
+duti -s dev.zed.Zed .csv all
+duti -s dev.zed.Zed .sh all
+duti -s dev.zed.Zed .yaml all
+duti -s dev.zed.Zed .properties all
+duti -s dev.zed.Zed .gradle all
+duti -s dev.zed.Zed .kt all
+duti -s dev.zed.Zed .java all
+duti -s dev.zed.Zed .json all
+duti -s dev.zed.Zed .strings all
+duti -s dev.zed.Zed .swift all
+duti -s dev.zed.Zed .h all
+duti -s dev.zed.Zed .c all
+duti -s dev.zed.Zed .cpp all
+duti -s dev.zed.Zed .m all
+duti -s dev.zed.Zed .mm all
+duti -s dev.zed.Zed .cmake all
+duti -s dev.zed.Zed .pch all
+duti -s dev.zed.Zed .plist all
+duti -s dev.zed.Zed LICENSE all
+duti -s dev.zed.Zed .py all
+duti -s dev.zed.Zed Podfile all
+duti -s dev.zed.Zed Brewfile all
+duti -s dev.zed.Zed .rst all
+duti -s dev.zed.Zed .js all
+duti -s dev.zed.Zed .ts all
+duti -s dev.zed.Zed .go all
+duti -s dev.zed.Zed .gitignore all
+duti -s dev.zed.Zed .gitconfig all
+duti -s dev.zed.Zed .zshrc all
+duti -s dev.zed.Zed .bashrc all
+duti -s dev.zed.Zed .toml all
+duti -s dev.zed.Zed .bat all
+duti -s dev.zed.Zed .svg all
+duti -s dev.zed.Zed .pom all
+duti -s dev.zed.Zed .proto all
+duti -s dev.zed.Zed .log all
 
 # File type associations for VLC
 duti -s org.videolan.vlc .wav all
 duti -s org.videolan.vlc .3gp all
 duti -s org.videolan.vlc .webm all
+duti -s org.videolan.vlc .m3u all
 
 >&2 echo ""
 >&2 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
