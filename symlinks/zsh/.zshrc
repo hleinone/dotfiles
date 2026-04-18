@@ -74,16 +74,6 @@ fi
 
 #export FLUTTER_ROOT="$(mise where flutter)"
 
-PROCESS_NAME=$(ps -p $PPID -o comm=)
-if [[ "${PROCESS_NAME[1]}" == "/" ]] then
-  PARENT_PROCESS_NAME=$(basename "$PROCESS_NAME")
-else
-  PARENT_PROCESS_NAME="$PROCESS_NAME"
-fi
-
-echo "$PROCESS_NAME" >> "$HOME/.process_name"
-echo "$PARENT_PROCESS_NAME" >> "$HOME/.parent_process_name"
-
 # Include Antigravity executables
 export PATH="/Users/hannu.leinonen/.antigravity/antigravity/bin:$PATH"
 
