@@ -40,16 +40,18 @@ bindkey "^[[A" up-line-or-beginning-search # ↑
 bindkey "^[[B" down-line-or-beginning-search # ↓
 
 
-# These two initialize the completion system,
-# providing the case-sensitive expansion
+# These initialize the completion system, providing the case-sensitive expansion
 if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  FPATH="${HOMEBREW_PREFIX:-$(brew --prefix)}/share/zsh-completions:$FPATH"
 
   autoload -Uz compinit
-  compinit
+  if [[ ! -f ~/.zcompdump || -n ~/.zcompdump(#qN.mh+24) ]]; then
+    compinit -d ~/.zcompdump
+    touch ~/.zcompdump
+  else
+    compinit -C -d ~/.zcompdump
+  fi
 fi
-#autoload -Uz compinit
-#compinit
 
 # This sets the case insensitivity
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
