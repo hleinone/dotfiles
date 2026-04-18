@@ -112,7 +112,7 @@ cask "discord"
 cask "bambu-studio"
 cask "godot"
 cask "musicbrainz-picard"
-cask "yubico-yubikey-manager"
+cask "yubico-authenticator"
 
 # Gaming
 cask "steam"
