@@ -71,6 +71,16 @@ duti -s org.videolan.vlc .3gp all
 duti -s org.videolan.vlc .webm all
 duti -s org.videolan.vlc .m3u all
 
+# Configure and install development tools using Mise-en-place
+mise settings add idiomatic_version_file true
+mise settings add idiomatic_version_file_enable_tools node
+mise plugins install https://github.com/nyuyuyu/asdf-flutter.git
+mise use --global java@latest
+mise use --global node@latest
+mise use --global python@latest
+mise use --global ruby@latest
+mise use --global flutter@latest
+
 >&2 echo ""
 >&2 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
 >&2 echo "\033[0;32mInstall Font Tools for Xcode from: https://developer.apple.com/download/all/?q=font\033[0m"
