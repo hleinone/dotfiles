@@ -74,6 +74,8 @@ duti -s org.videolan.vlc .m3u all
 # Configure and install development tools using Mise-en-place
 mise settings add idiomatic_version_file true
 mise settings add idiomatic_version_file_enable_tools node
+mise settings add idiomatic_version_file_enable_tools flutter
+mise settings ruby.compile=false
 mise plugins install https://github.com/nyuyuyu/asdf-flutter.git
 mise use --global java@latest
 mise use --global node@latest
