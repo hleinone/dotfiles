@@ -82,6 +82,7 @@ mise use --global node@latest
 mise use --global python@latest
 mise use --global ruby@latest
 mise use --global flutter@latest
+mise use --global go@latest
 
 >&2 echo ""
 >&2 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
