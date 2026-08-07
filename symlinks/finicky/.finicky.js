@@ -36,5 +36,16 @@ export default {
         profile: "Hannu",
       }
     },
+  ],
+
+  rewrite: [
+    {
+      match: ["x.com/*", "twitter.com/*"],
+      url: (url) => {
+        url.host = "xcancel.com";
+        return url;
+      },
+    },
   ]
+
 }
