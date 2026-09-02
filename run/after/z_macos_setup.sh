@@ -15,12 +15,6 @@ trap 'rm -rf "$REPOS_DIR"' EXIT
     set +x
 )
 
-# Install ESP-IDF
->&2 echo "Installing ESP-IDF…"
-mkdir -p ~/esp
-if cd "${HOME}/esp/esp-idf"; then git pull; else git clone --recursive https://github.com/espressif/esp-idf.git "${HOME}/esp/esp-idf"; fi
-~/esp/esp-idf/install.sh
-
 # File type associations for Zed
 duti -s dev.zed.Zed .md all
 duti -s dev.zed.Zed .xml all
