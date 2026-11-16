@@ -3,8 +3,4 @@
 *.iml
 .DS_Store
 .cxx
-.python-version
-.go-version
-.java-version
-.node-version
-mise.toml
+**/.claude/settings.local.json

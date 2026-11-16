@@ -4,6 +4,8 @@
 	signingkey = 14842C9777E5A984
 [core]
 	excludesfile = ~/.gitignore_global
+	longpaths = true
+	ignorecase = false
 [commit]
 	gpgsign = true
 [init]
