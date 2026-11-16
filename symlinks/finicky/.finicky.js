@@ -42,7 +42,7 @@ export default {
     {
       match: ["x.com/*", "twitter.com/*"],
       url: (url) => {
-        url.host = "xcancel.com";
+        url.host = "nitter.cf";
         return url;
       },
     },
