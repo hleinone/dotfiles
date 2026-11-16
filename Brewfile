@@ -22,6 +22,7 @@ brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "fonttools"
+brew "aria2"
 
 # GNU
 brew "coreutils"
