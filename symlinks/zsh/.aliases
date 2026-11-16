@@ -1,6 +1,13 @@
 alias l='ls -laFh'
 alias la='ls -lAfh'
 alias ll='ls -l'
+lt() {
+  if (( $# == 0 )); then
+    ls -lt
+  else
+    ls -lt | head -n "$(( $1 + 1 ))"
+  fi
+}
 
 alias rm='rm -i'
 alias cp='cp -i'
