@@ -85,6 +85,9 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 # Include Mint executables
 export PATH="$HOME/.mint/bin:$PATH"
 
+# Include local executables
+export PATH="$HOME/.local/bin:$PATH"
+
 # Include GNU tools
 for d in "${HOMEBREW_PREFIX}/opt/"*"/libexec/gnubin"; do export PATH=$d:$PATH; done
 for d in "${HOMEBREW_PREFIX}/opt/"*"/libexec/gnuman"; do export MANPATH=$d:$MANPATH; done
@@ -111,4 +114,6 @@ monday() {
 }
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
+
 
