@@ -18,8 +18,4 @@ alias ..='cd ..'
 alias icat='kitty +kitten icat'
 alias d='kitty +kitten diff'
 
-# alias flutter='export FLUTTER_ROOT="$(mise where flutter)"; flutter'
-
-alias flutter='export FLUTTER_ROOT="$(mise where flutter)"; flutter'
-
 alias youtube-dl='yt-dlp'
