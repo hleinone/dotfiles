@@ -78,6 +78,9 @@ mise use --global ruby@latest
 mise use --global flutter@latest
 mise use --global go@latest
 
+# Ensure that Xcode build system uses same environment as the shell
+defaults write com.apple.dt.Xcode UseSanitizedBuildSystemEnvironment -bool NO
+
 >&2 echo ""
 >&2 echo "\033[0;32mInstall Additional Tools for Xcode from: https://developer.apple.com/download/more/\033[0m"
 >&2 echo "\033[0;32mInstall Font Tools for Xcode from: https://developer.apple.com/download/all/?q=font\033[0m"

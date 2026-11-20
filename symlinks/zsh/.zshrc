@@ -7,12 +7,6 @@ fi
 export CLICOLOR=1
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
-export LANG=en_US.UTF-8
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-export JAVA_HOME=""
-export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
-
 # History
 setopt appendhistory sharehistory incappendhistory
 
@@ -74,23 +68,6 @@ if ! zgenom saved; then
   zgenom save
 fi
 
-#export FLUTTER_ROOT="$(mise where flutter)"
-
-# Include Antigravity executables
-export PATH="/Users/hannu.leinonen/.antigravity/antigravity/bin:$PATH"
-
-# Include Pub executables
-export PATH="$HOME/.pub-cache/bin:$PATH"
-
-# Include Mint executables
-export PATH="$HOME/.mint/bin:$PATH"
-
-# Include local executables
-export PATH="$HOME/.local/bin:$PATH"
-
-# Include GNU tools
-for d in "${HOMEBREW_PREFIX}/opt/"*"/libexec/gnubin"; do export PATH=$d:$PATH; done
-for d in "${HOMEBREW_PREFIX}/opt/"*"/libexec/gnuman"; do export MANPATH=$d:$MANPATH; done
 
 # Load thefuck
 lazyload fuck -- 'eval "$(thefuck --alias)"'
